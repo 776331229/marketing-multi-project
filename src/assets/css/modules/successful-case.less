@@ -1,0 +1,210 @@
+@import "./../index";
+.middle{
+  position: relative;
+  padding-top: 70px;
+  width: 100%;
+  background: #f8f8f8;
+  height: 2370px;
+}
+
+//模块 公共样式
+.hr_line{
+  margin: 0 45px;
+  width: 416px;
+  height: 0;
+  border:1px solid #e5e5e5;
+  background: #fff;
+}
+.testimonial-card{
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+  margin-bottom: 62px;
+  width: 95%;
+  height: 306px;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow .2s ease,opacity .2s ease;
+  -moz-transition: box-shadow .2s ease,opacity .2s ease; /* Firefox 4 */
+  -webkit-transition: box-shadow .2s ease,opacity .2s ease; /* Safari 和 Chrome */
+  -o-transition: box-shadow .2s ease,opacity .2s ease;
+
+}
+
+
+.testimonial-fullbleed{
+  position: absolute;
+  width: 100%;
+  height: 306px;
+  background-size: cover;
+  background-position: 50%;
+  //background-image: url("../../../static/banner/city_west_03.png");
+  transition: height .3s ease;
+}
+//模块上的文字标签样式
+.row{
+  max-width: 100%;
+}
+.bottom_6{
+  bottom:6%;
+}
+.bottom_9{
+  bottom:9%;
+}
+.height{
+  height: 204px !important;
+}
+//标签盒子
+.testimonial-card-text{
+  position: absolute;
+  left: 20%;
+  width: 510px;
+  height: 220px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+  //transform: translateY(-10px);
+  transition:all .2s ease;
+}
+//介绍文字
+.quote{
+  display: block;
+  padding: 45px 40px 40px 40px;
+  min-height:56px;
+  color: #414141;
+  background: rgba(255,255,255,.95);
+  letter-spacing: .05px;
+  font-weight: 300;
+  line-height: 1.78;
+  transition: background .2s ease,opacity .2s ease;
+  p{
+    font-size: 14px;
+  }
+}
+//logo和模块名称
+.title{
+  height: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color:#fff;
+}
+.testimonial-logo{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  line-height: 60px;
+  //background-image: url("../../assets/images/successful/label_02.png");
+  background-repeat: no-repeat;
+  background-position: 0;
+  border-right: none;
+}
+.anchor{
+  width: 40%;
+  font-size: 24px;
+  color:rgba(65,65,65,.4);
+}
+
+
+//机场
+.airport{
+  .effect;
+}
+//  每个模块背景图
+.backImg_airport{
+  background-image: url("../../../../static/banner/airport_03.png");
+}
+//每个模块logo
+.airport_logo{
+  background-image: url("../../../assets/images/successful/label_01.png");
+}
+//城西银泰城
+.city_west{
+  .effect;
+}
+.backImg_city_west{
+  background-image: url("../../../../static/banner/city_west_03.png");
+}
+.city_west_logo{
+  background-image: url("../../../assets/images/successful/label_02.png");
+}
+
+//左邻右舍
+.left_right{
+  .effect;
+}
+.backImg_left_right{
+  background-image: url("../../../../static/banner/open_03.png");
+}
+.left_right_logo{
+  background-image: url("../../../assets/images/successful/label_03.png");
+}
+//正新鸡排
+.chicken_chop{
+  .effect;
+}
+.backImg_chicken_chop{
+  background-image: url("../../../../static/banner/chicken_chop_03.png");
+}
+.chicken_chop_logo{
+  background-image: url("../../../assets/images/successful/label_04.png");
+}
+//小飞象
+.dumbo{
+  .effect;
+}
+.backImg_dumbo{
+  background-image: url("../../../../static/banner/Dumbo_03.png");
+}
+.dumbo_logo{
+  background-image: url("../../../assets/images/successful/label_05.png");
+}
+
+//鼠标移到模块内部的效果图
+.effect{
+  &:hover{
+    box-shadow: 0 5px 20px 18px rgba(230,230,230,.1);;
+  }
+  &:hover .testimonial-fullbleed{
+    height:308px;
+  }
+  &:hover .testimonial-card-text{
+    transform: translateY(-10px);
+  }
+  &:hover .quote{
+    background: rgba(255,255,255,1);
+  }
+}
+
+
+@media screen and (min-width: 1000px){
+  .row{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//加入我们
+.join-us{
+  position: absolute;
+  left: 15px;
+  bottom:10px;
+  padding-top: 54px;
+  width: 97%;
+  height: 136px;
+  text-align: center;
+  p{
+    color: #414141;
+    font-size: 24px;
+  }
+  .myButton{
+    margin: 40px auto;
+    width: 165px;
+    height: 38px;
+    font-size: 14px;
+    border: 1px solid #00a0e9;
+    border-radius: 5px;
+    background: #00a0e9;
+  }
+}

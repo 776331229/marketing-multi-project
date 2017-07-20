@@ -50,7 +50,15 @@ module.exports = {
     port: 8090,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api':{
+        target:'http://shouzhan1.51fubei.com',   //接口地址域名
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':''
+        }
+      },
+    },
     cssSourceMap: false
   }
 }

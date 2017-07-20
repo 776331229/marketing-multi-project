@@ -289,12 +289,16 @@
   import banner3 from './../../../static/banner/banner3.png'
   import banner4 from './../../../static/banner/banner4.png'
   import FModule from 'src/components/f-module/index.vue'
+  import FFooter from 'src/components/f-footer'
+  import FHeader from 'src/components/f-header'
   import http from 'src/utils/http'
   export default {
     mixins: [swiper],
     components: {
       FModule,
-      FPayment
+      FPayment,
+      FHeader,
+      FFooter,
     },
     data () {
       return {

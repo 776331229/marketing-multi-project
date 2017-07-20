@@ -1,0 +1,103 @@
+@import "./../index";
+.apply-form {
+  width: 100%;
+  height: 100%;
+}
+
+
+.apply-content {
+  width: 980px;
+  padding-top: 20px;
+  margin: 0 auto 20px;
+  //margin: 20px auto;
+  //顶部样式
+  .top {
+    position: relative;
+    .fubei-logo {
+      width: 180px;
+    }
+    .right {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+  //底部
+.cootRight{
+  width: 100%;
+  color:#363636;
+  font-size: 12px;
+  text-align: center;
+  margin-top:10px;
+}
+}
+
+//表格样式
+.table {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  width: 858px;
+  padding: 50px 60px;
+  color: #51534f;
+  font-size: 18px;
+  .my-form {
+    margin-top: 40px;
+    .span {
+      display: inline-block;
+      width: 90px;
+    }
+    .label {
+      margin-bottom: 20px;
+      .verify-img {
+        margin-left: 20px;
+      }
+    }
+    input, select {
+      height: 40px;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+      line-height: 40px;
+    }
+    input {
+      width: 270px;
+      text-indent: 5px;
+    }
+    select option {
+        line-height: 25px;
+        height: 25px;
+    }
+    .code{
+      width: 82px;
+    }
+  }
+
+  .regInfo {
+    color: red;
+    font-size: 12px;
+    padding-left: 5px;
+    &:after {
+      content: "*";
+    }
+  }
+  //提交按钮
+  .btn{
+    margin-left: 290px;
+    margin-top:50px;
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    color:#fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .btn-submit{
+    border: 1px solid rgb(0,160,233);
+    background:rgb(0,160,233);
+  }
+  .btn-limit{
+    border: 1px solid #ccc;
+    background-color:#ccc;
+  }
+}

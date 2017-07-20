@@ -1,0 +1,71 @@
+@import "./../index";
+.cards-box{
+  padding:18px 0;
+  //display: flex;
+  //flex-flow:row wrap;
+  //justify-content: space-between;
+}
+.card{
+  float: left;
+  margin-bottom:32px;
+  margin-right: 23px;
+  padding: 10px;
+  width: 362px;
+  height: 323px;
+  font-size: 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 6px rgba(243,243,243,.1);
+  &:hover {
+    box-shadow: 0 0 2px 6px rgba(243,243,243,.6);
+  }
+  .font-siyuan;
+  img{
+    width: 360px;
+    height: 200px;
+  }
+  .card-title{
+    height: 40px;
+  }
+  .card-content{
+    height: 33px;
+    margin-top:18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  .auth-info{
+    margin-top:14px;
+    height: 16px;
+    .name-time{
+      width: 70%;
+      height: 100%;
+      .li-before(17px,17px,17px,0,url("../../../assets/images/news/icon/auth.png"));
+      .name{
+        margin:0 6px 0 22px;
+      }
+    }
+   .chat{
+     width: 28%;
+     text-align: right;
+   }
+    .labels{
+      display: inline-block;
+    }
+    .icon2{
+      width: 16px;
+      height: 14px;
+      background: url("../../../assets/images/news/icon/common.png");
+    }
+  }
+}
+
+.card:nth-of-type(3n+0){
+  margin-right: 0;
+}
+.tips{
+  margin: 0 auto;
+  color: #ccc;
+  display: inline-block;
+}

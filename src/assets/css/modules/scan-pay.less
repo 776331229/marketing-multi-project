@@ -1,0 +1,365 @@
+@import "./../index";
+//轮播图样式
+.swiper-box {
+  position: relative;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 156px;
+  left: 351px;
+  width: 45px;
+  height: 117px;
+  opacity: 0.1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-prev:hover {
+  opacity: 0.3;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 156px;
+  right: 347px;
+  width: 45px;
+  height: 117px;
+  opacity: 0.1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-next:hover {
+  opacity: 0.3;
+}
+//二维码支付
+.code-pay{
+  width: 100%;
+.pay-box{
+  padding-top: 90px;
+  padding-bottom: 75px;
+  .pay-process{
+    margin-top: 55px;
+    text-align:center;
+    font-size: 16px;
+    color: #666666;
+    .deal-pro{
+      margin-left: 198px;
+      .li-before(18px,31px,-92px,50%,url(./../../../../static/scanPay/right-arrow.png));
+    }
+  }
+}
+}
+.line{
+  display: inline-block;
+  width: 50px;
+  vertical-align: middle;
+  border: 1px solid #212121;
+}
+//掌上生意
+.handle{
+  display: inline-block;
+  width: 100%;
+  height: 670px;
+  background-image: url("../../../../static/scanPay/app-handle2.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  //background-attachment: fixed;
+  //background-size:cover;
+  //-webkit-background-size: cover;
+  //-o-background-size: cover;
+  zoom: 1;
+  background-color: #f8f8f8;
+  .handle-title{
+    //margin-top: 70px;
+  }
+}
+.handle-middle{
+  width: 100%;
+  height: 364px;
+  //background-image: url("../../assets/images/scanPay/app-handle2.png");
+  //background-repeat: no-repeat;
+  //background-position: center bottom;
+  //background-size:100%;
+  //margin-top:88px;
+  .sweep {
+    width: 364px;
+    padding-right: 36px;
+    margin-top:65px;
+    vertical-align: top;
+    cursor: pointer;
+  }
+  .handle-pic {
+    vertical-align: top;
+  }
+  .handle-right {
+    width: 364px;
+    padding-left: 36px;
+    vertical-align: top;
+    cursor: pointer;
+  }
+}
+//扫码支付和门店管理样式
+.handle-left{
+  margin-top: 50px;
+}
+.handle-right{
+  margin-top: 55px;
+  width: 400px;
+}
+.small-trangle-l{
+  background: #fff;
+  .li-before(15px,22px,383px,40%,url('../../../assets/images/icon/trangle.png'));
+}
+.small-trangle-r{
+  background: #fff;
+  .li-before(15px,22px,4px,40%,url('../../../assets/images/icon/trangle1.png'));
+}
+//手机图片样式
+.handle-pic{
+  width: 400px;
+  img{
+    width: 100%;
+  }
+}
+
+h3{
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333333;
+}
+h5{
+  font-size: 16px;
+  color: #666666;
+  line-height: 24px;
+}
+.marginBesides-25{
+  margin-left: 19px;
+  margin-right: 24px;
+}
+.marginBesides-15-24{
+  margin-left: 15px;
+  margin-right: 24px;
+}
+.marginBesides-29-20{
+  margin-left: 29px;
+  margin-right:24px;
+}
+.marginBesides-29-17{
+  margin-left: 29px;
+  margin-right:17px;
+}
+
+
+
+
+//PC 收银台页面
+.pc-big-box {
+  height: 564px;
+  background: url(../../../../static/scanPay/pcbg.png) no-repeat bottom center;
+  .pc-title {
+    position: relative;
+    width: 1200px;
+    margin-left: -53px;
+    .line-one {
+      position: absolute;
+      top: 22px;
+      left: 491px;
+      width: 50px;
+      height: 2px;
+      background-color: #000;
+    }
+  }
+}
+
+// 支付tab页面  支付展示页面
+.pay-title-box {
+  height: 100px;
+  line-height: 100px;
+  background-color: #f7fbff;
+  .pay-title {
+    width: 1200px;
+    position: relative;
+    .line-one {
+      position: absolute;
+      top: 50px;
+      left: 324px;
+      width: 63px;
+      height: 1px;
+      background-color: #cdcdcd;
+    }
+    .line-two {
+      position: absolute;
+      top: 50px;
+      left: 811px;
+      width: 63px;
+      height: 1px;
+      background-color: #cdcdcd;
+    }
+  }
+}
+
+//支付tab页面 支付显示页面 view
+.pay-view {
+  height: 458px;
+  background-color: #f8f8f8;
+}
+
+.pay-tab {
+  height: 60px;
+  background: url(../../../assets/images/scanPay/tab.png) no-repeat;
+  position: relative;
+  .pay-3-box {
+    width: 1200px;
+    .tab-logo {
+      //position: absolute;
+      //top: -18px;
+      //left: 535px;
+      //width: 27px;
+      //height: 24px;
+      //background: url(../../assets/images/scanPay/tab02.png) no-repeat;
+    }
+    li {
+      display: inline-block;
+      width: 400px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+    }
+    .pay-link.router-link-active {
+      font-size: 24px;
+      color: #00a0e9;
+      font-family: PingFang-SC-Light;
+      .li-before();
+    }
+    a.router-link-active{
+      font-size: 24px;
+      color:  #00a0e9;
+      font-family: PingFang-SC-Light;
+      .li-before(28px,57px,url(../../../assets/images/scanPay/tab02.png))
+    }
+  }
+  .li-before(@width:27px,@left:33px,@img:url(../../../assets/images/scanPay/tab02.png)){
+    position: relative;
+    //tab栏上面的三角跳转
+    &:before {
+      content: "";
+      position: absolute;
+      top: -33px;
+      left: @left;
+      width: @width;
+      height: 24px;
+      background: @img;
+    }
+  }
+}
+
+//POS 支付页面
+.pos-big-box {
+  height: 593px;
+  background: url(../../../../static/scanPay/posBG.png) repeat;
+  .pos-title {
+    width: 1200px;
+    height: 36px;
+    .pos-words {
+      position: relative;
+      .line-one {
+        position: absolute;
+        top: 22px;
+        left: 250px;
+        width: 50px;
+        height: 2px;
+        background-color: #000;
+      }
+    }
+  }
+  .pos-notes {
+    width: 1200px;
+    .pos-description {
+      width: 585px;
+      height: 365px;
+      vertical-align: top;
+    }
+  }
+}
+
+//pos展示信息页面样式
+.pos-show {
+  height: 750px;
+  background-color: #f8f8f8;
+  .show-big-box {
+    height: 750px;
+    .box-four {
+      height: 750px;
+      width: 1200px;
+      position: relative;
+      .show-box-one {
+        width: 510px;
+        height: 298px;
+        vertical-align: top;
+        border: 1px solid #e5e5e5;
+      }
+      .sign-box {
+        position: absolute;
+        top: 303px;
+        left: 48%;
+        width: 100px;
+        height: 100px;
+        background:url(../../../assets/images/scanPay/plus.png) no-repeat;
+      }
+    }
+  }
+}
+
+
+
+//api 支付样式
+.api-big-box {
+  height: 552px;
+  background:url(../../../../static/scanPay/apiinterface.png) no-repeat center bottom;
+  .section {
+    height: 552px;
+    .api-title {
+      width: 1200px;
+      height: 50px;
+      .api-tag  {
+        position: relative;
+        .line-one {
+          position: absolute;
+          top: 22px;
+          left: 431px;
+          width: 50px;
+          height: 2px;
+          background-color: #000;
+        }
+      }
+    }
+    //api 描述
+    .api-words {
+      width: 400px;
+      height: 500px;
+      margin-top: 90px;
+      margin-left: 650px;
+      .font-words-two {
+        width: 384px;
+        height: 42px;
+        color: #00a0e9;
+        margin-bottom: 26px;
+        line-height: 42px;
+        border-top: 1px solid #00a0e9;
+        border-bottom: 1px solid #00a0e9;
+      }
+      .font-3-box {
+        li {
+          position: relative;
+          i.api-port {
+            width: 80px;
+            height: 34px;
+            position: absolute;
+            top: -6px;
+            left: 50px;
+            background: url(../../../assets/images/scanPay/port.png) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
