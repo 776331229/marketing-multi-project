@@ -1,0 +1,288 @@
+@import "./../../../assets/css/index.less";
+//轮播图样式
+.swiper-box {
+  position: relative;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 156px;
+  left: 351px;
+  width: 45px;
+  height: 117px;
+  opacity: 0.1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-prev:hover {
+  opacity: 0.3;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 156px;
+  right: 347px;
+  width: 45px;
+  height: 117px;
+  opacity: 0.1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-next:hover {
+  opacity: 0.3;
+}
+
+
+//移动支付首批授权服务商
+.top-detail{
+  width: 100%;
+  height: 346px;
+  display: flex;
+}
+.service{
+  display: inline-block;
+  height: 80%;
+}
+.service-pic{
+  margin-left: 78px;
+  width: 45%;
+  background-image: url("./../../../../static/cooperation/top5_03.png");
+  background-repeat: no-repeat;
+}
+.benefit{
+  .benefit-detail{
+    width: 100%;
+    height:60px;
+  }
+  //.money{
+  //  display: inline-block;
+  //  width: 47px;
+  //  height: 47px;
+  //}
+  //.icon1{
+  //  background-image: url("./../../assets/images/cooperation/get-money.png");
+  //}
+  //.icon2{
+  //  width: 50px;
+  //  height: 49px;
+  //  background-image: url("./../../assets/images/cooperation/service.png");
+  //}
+}
+// 资质特权
+.Qualification{
+//width: 100%;
+  height: 425px;
+}
+.privileges{
+  width: 100%;
+}
+.discount {
+  width: 210px;
+  height: 275px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow:0 5px 3px  rgba(0, 0, 0, .1);
+}
+// 明显优势
+.box{
+  width: 1148px;
+  height: 131px;
+  margin-bottom:54px;
+  margin-left: 10px;
+}
+//手风琴样式
+.logo-icon{
+  background: url("../../../../static/icon/cases-logo.png");
+  width: 129px;
+  height: 129px;
+  display: block;
+}
+.case-logo-list-box ul{
+  padding-left: 40px;
+}
+.case-logo-list-box ul>li{
+  margin-left: -40px;
+  float: left;
+  &:hover +li{
+    margin-left: 0;
+  }
+}
+.icon-1{
+  background-position: -645px 130px;
+}
+.icon-2{
+   background-position: -516px 130px;
+ }
+.icon-3{
+  background-position: -387px 130px;
+}
+.icon-4{
+  background-position: -258px 130px;
+}
+.icon-5{
+  background-position: -129px 130px;
+}
+.icon-6{
+  background-position: 0 130px;
+}
+.icon-7{
+  background-position: -645px 259px;
+}
+.icon-8{
+  background-position: -516px 259px;
+}
+.icon-9{
+  background-position: -387px 259px;
+}
+.icon-10{
+  background-position: -258px 259px;
+}
+.icon-11{
+  background-position: -129px 259px;
+}
+.icon-12{
+  background-position: 0 259px;
+}
+.hot-line{
+  margin: 0 auto;
+  width: 420px;
+  height: 44px;
+  line-height: 44px;
+  border:1px dashed #00a0e9;
+  border-radius: 4px;
+}
+//加盟优势
+.join-advantage{
+  height: 596px;
+  background: url("../../../../static/cooperation/partnership.png") no-repeat center;
+  background-size: cover;
+}
+//补贴活动
+.Subsidy-activities{
+  height: 500px;
+  background: url("../../../../static/cooperation/bg2.png") no-repeat center bottom;
+  .section{
+    height: 326px;
+    position: relative;
+  }
+  .subsidy{
+    margin-left: 117px;
+    vertical-align: top;
+    .mark-money{
+      display: inline-block;
+      width: 100%;
+      height: 82px;
+      font-size: 12px;
+      .li-before(451px,39px,-11px,0,url("../../../assets/images/icon/mark-money.png"));
+    }
+  }
+  .orange-line{
+    .line(@orange);
+  }
+  .subsidy-title{
+    text-align: left;
+    .li-before(20px,15px,-8px,88%,url("../../../assets/images/icon/marks.png"));
+  }
+  .activities{
+    position: absolute;
+  }
+}
+//服务支持
+.service-support{
+  .section{
+    padding-top:90px;
+    padding-bottom: 15px;
+    height: 571px;
+    .li-before(200px,215px,43%,32%,url("../../../../static/cooperation/bg3.png"));
+  }
+  .support-reason{
+    width: 1200px;
+    .reason-content{
+      margin-top:40px;
+      margin-left: 98px;
+      .reason-head {
+        position: relative;
+        .ver-title {
+          position: absolute;
+          top: 55px;
+          left: 99px;
+          width: 93px;
+          height: 1px;
+          background-color: #00a0e9;
+        }
+      }
+
+    }
+  }
+}
+//加盟流程
+.join-process{
+  //height: 474px;
+  padding-top:90px;
+  padding-bottom: 70px;
+  //background:.bg-light-blue;
+.section{
+  //width: 1200px;
+  //height: 474px;
+  background: url("../../../../static/cooperation/bg-line.png") no-repeat;
+  background-size: contain;
+  background-position: center 40%;
+  .processes{
+    margin-top: 50px;
+    margin-bottom: 65px;
+    .process{
+      vertical-align: top;
+    }
+  }
+}
+}
+.line{
+  width: 115px;
+}
+//按钮 申请加入
+.apply{
+  display: inline-block;
+  width: 193px;
+  height: 40px;
+  margin: 0 auto;
+  line-height: 40px;
+  border: 1px solid #00a0e9;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    color:#fff;
+    background: #00a0e9;
+  }
+}
+//年入百万计划
+.million{
+  .section{
+    padding-bottom: 80px;
+  }
+}
+.million-plan{
+  width: 1200px;
+  margin-top:40px;
+}
+.profit{
+  margin-top:61px;
+  margin-bottom: 42px;
+}
+.area-develop{
+  margin-top:48px;
+  margin-bottom: 62px;
+}
+.plann-box{
+  margin-bottom: 50px;
+  .box-left{
+    margin-right: 100px;
+    width: 506px;
+  }
+  .box-icon{
+    display: inline-block;
+    margin-right: 29px;
+  }
+  .box-word{
+    display: inline-block;
+    width: 377px;
+  }
+
+}

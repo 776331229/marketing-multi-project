@@ -1,0 +1,452 @@
+@import url(./../index.less);
+//轮播图样式
+.swiper-box {
+  position: relative;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 156px;
+  left: 351px;
+  width: 45px;
+  height: 117px;
+  opacity: .1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-prev:hover {
+  opacity: .3;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 156px;
+  right: 347px;
+  width: 45px;
+  height: 117px;
+  opacity: .1;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.swiper-button-next:hover {
+  opacity: .3;
+}
+
+//支付方式样式
+  .f-module-box.pay-big-box {
+    height: 718px;
+    border-bottom: 1px solid #CBEBFB;
+    background: url(../../images/home/payment/bg.png) no-repeat  center bottom;
+    //支付方式盒子
+    .pay-box {
+      text-align: center;
+      //支付描述
+      .pay-account {
+         text-align: center;
+        //支付pay logo 样式
+        .pay-logo {
+          width: 387px;
+          height: 60px;
+          background: url(../../images/home/payment/paycode.png) no-repeat ;
+        }
+        //支付方式 样式
+        .pay-way{
+          width: 740px;
+          height: 41px;
+          text-align: center;
+          background:url(../../../../static/home/payment/logo.png) no-repeat;
+        }
+      }
+      //手机样式
+      .pay-iphone-box {
+        width: 1002px;
+        height: 583px;
+        border: 1px solid #d6d6d6;
+        border-radius: 50px;
+        box-shadow: 0 0 30px rgba(102,198,242,20%);
+        background-color: #fff;
+        //支付模式大盒子
+        .pay-case {
+          width: 912px;
+          height: 494px;
+          border: 1px solid #d6d6d6;
+          border-bottom: 0;
+          .pay-big-box {
+            width: 912px;
+            height: 438px;
+          }
+          //支付导航栏
+          .pay-option {
+            height: 57px;
+            border-top: 1px solid #d6d6d6;
+            //支付图标大盒子
+            .pay-icon-box {
+              height: 57px;
+              line-height:57px;
+              cursor: pointer;
+               li{
+                 position: relative;
+                 display: inline-block;
+                 width: 160px;
+                 height: 56px;
+                   //二维码收款
+                   i.qri-coon {
+                     position: absolute;
+                     top: 17px;
+                     left: 10px;
+                     width: 25px;
+                     height: 26px;
+                     background:url(../../images/home/payment/qrcode/qricon2.png) no-repeat;
+                   }
+                 //app收款
+                 i.app-icon {
+                   position: absolute;
+                   top: 17px;
+                   left: 16px;
+                   width: 25px;
+                   height: 26px;
+                   background:url(../../images/home/payment/app/appicon2.png) no-repeat;
+                 }
+                 //扫码枪收款
+                 i.scan-icon {
+                   position: absolute;
+                   top: 17px;
+                   left: 10px;
+                   width: 25px;
+                   height: 26px;
+                   background:url(../../images/home/payment/scan/scanicon2.png) no-repeat;
+                 }
+                 //POS机收款
+                 i.pos-icon {
+                   position: absolute;
+                   top: 17px;
+                   left: 10px;
+                   width: 25px;
+                   height: 26px;
+                   background:url(../../images/home/payment/pos/posicon2.png) no-repeat;
+                 }
+                 //API收款
+                 i.api-icon {
+                   position: absolute;
+                   top: 17px;
+                   left: 22px;
+                   width: 25px;
+                   height: 26px;
+                   background:url(../../images/home/payment/api/apiicon2.png) no-repeat;
+                 }
+                 //右侧边栏细线
+                 i.line-right{
+                   position: absolute;
+                   top: 8px;
+                   left: 150px;
+                   width: 1px;
+                   height: 21px;
+                   margin-top: 10px;
+                   padding: 0;
+                   background-color: #d6d6d6;
+                 }
+               }
+              //二维码收款
+              .tab-link{
+                display: inline-block;
+                color: #00a0e9;
+                i.qri-coon {
+                  position: absolute;
+                  top: 17px;
+                  left: 10px;
+                  width: 25px;
+                  height: 26px;
+                  background:url(../../images/home/payment/qrcode/qricon.png) no-repeat;
+                }
+              }
+                //App收款
+              .app-link {
+                display: inline-block;
+                color: #00a0e9;
+                i.app-icon {
+                  position: absolute;
+                  top: 17px;
+                  left: 16px;
+                  width: 25px;
+                  height: 26px;
+                  background:url(../../images/home/payment/app/appicon.png) no-repeat;
+                }
+              }
+              //扫码枪
+              .scan-link {
+                display: inline-block;
+                color: #00a0e9;
+                i.scan-icon {
+                  position: absolute;
+                  top: 17px;
+                  left: 10px;
+                  width: 25px;
+                  height: 26px;
+                  background:url(../../images/home/payment/scan/scanicon.png) no-repeat;
+                }
+              }
+              //pos收款
+              .pos-link {
+                display: inline-block;
+                color: #00a0e9;
+                i.pos-icon {
+                  position: absolute;
+                  top: 17px;
+                  left: 10px;
+                  width: 25px;
+                  height: 26px;
+                  background:url(../../images/home/payment/pos/posicon.png) no-repeat;
+                }
+              }
+              //API收款
+              .api-link {
+                display: inline-block;
+                color: #00a0e9;
+                i.api-icon {
+                  position: absolute;
+                  top: 17px;
+                  left: 22px;
+                  width: 25px;
+                  height: 26px;
+                  background:url(../../images/home/payment/api/apiicon.png) no-repeat;
+                }
+              }
+
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+//合作伙伴模块 样式
+.f-module-box.part-box {
+  height: 547px;
+  background:url(../../../../static/partners/bg.png) no-repeat center bottom;
+  //合作伙伴描述
+  .partners-big-box{
+    margin-top: 114px;
+    .text-note {
+      margin-bottom: 25px;
+      color: #212121;
+    }
+  }
+  //合作伙伴展示
+  .shop-box {
+    width: 1216px;
+    height: 250px;
+    margin-top: 60px;
+    ul {
+      padding: 0;
+
+      li {
+        display: inline-block;
+        width: 183px;
+        height: 130px;
+        margin-left: 13px;
+        margin-bottom: -20px;
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: baseline;
+        .logo-two {
+         padding-bottom: 12px;
+        }
+        .logo-three {
+         padding-bottom: 3px
+        }
+        .logo-four {
+          padding-bottom: 3px
+        }
+        .logo-five {
+         padding-bottom: 16px
+        }
+        .logo-six {
+          margin-bottom: -4px
+        }
+        .logo-eight {
+          padding-bottom: 15px;
+        }
+        .logo-nine {
+          padding-bottom: 10px;
+        }
+        .logo-eleven {
+          padding-bottom: 12px;
+        }
+        .logo-twelve {
+          padding-bottom: 20px;
+        }
+        .logo-thirteen {
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+}
+
+//服务体系模块
+.f-module-box {
+  .server-big-box{
+    height: 440px;
+    //服务信息模块描述
+    .server-note {
+      margin-top: 115px;
+      .server-note-2 {
+        margin-top: 15px;
+      }
+    }
+    //服务信息模块展示块
+    .server-3-box {
+      width: 1210px;
+      height: 300px;
+      ul {
+        li {
+          display: inline-block;
+          width: 378px;
+          height: 237px;
+          border: 1px solid #e5e5e5;
+          text-align: center;
+          padding: 10px 0;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+//72小时服务支持 样式
+.f-module-box.server-service {
+  height: 518px;
+}
+//服务流程样式
+.f-module-box.service-box {
+  margin-top: 89px;
+  background: url(../../../../static/partners/bg3.jpg) no-repeat;
+  //服务流程样式大盒子
+  .service-big-box {
+    height: 513px;
+    //服务图标logo
+    .service-logo {
+      width: 1200px;
+      margin-top: 67px;
+    }
+    .service-cooperation {
+      width: 1200px;
+      white-space: nowrap;
+      .cooperation-box {
+        position: relative;
+        width: 218px;
+        height: 248px;
+        border: 1px solid #00a0e9;
+        border-top-width: 0;
+        vertical-align: top;
+        img {
+          position: absolute;
+          top: -22px;
+          left: 101px;
+        }
+        //边框线
+        &:before {
+          content:'';
+          position: absolute;
+          display: inline-block;
+          width: 81px;
+          height: 1px;
+          background-color: #00a0e9;
+        }
+        &:after {
+          content:'';
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: inline-block;
+          width: 65px;
+          height: 1px;
+          background-color: #00a0e9;
+        }
+        .text-center {
+          padding-top: 37px;
+        }
+      }
+    }
+  }
+}
+//行业新闻大盒子
+.f-module-box{
+  .news-big-box {
+    margin-top: 108px;
+    //新闻logo
+    .news-logo {
+      width: 1200px;
+    }
+    //新闻内容
+    .news-content {
+      width: 1000px;
+      //新闻盒子
+      .news-3 {
+        width: 430px;
+        height: 444px;
+        border: 1px solid #cccccc;
+        vertical-align: middle;
+        .button-box-1 {
+          box-sizing: border-box;
+          width:430px;
+          height: 155px;
+        }
+        .up-to-date {
+          li{
+            overflow: hidden;
+            display: block;
+            height: 56px;
+            line-height: 56px;
+            padding-left: 40px;
+            font-size: 14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            background: url(../../images/partners/new.png) 0 50% no-repeat;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+          }
+        }
+        //more 链接
+        .news-more {
+          width: 83px;
+          height: 30px;
+          line-height: 26px;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #fff;
+          background-color: #0db3ff;
+          .more-style {
+            font-size: 15px;
+            position: relative;
+              .triangle {
+                position: absolute;
+                top: 9px;
+                left: 36px;
+                width: 8px;
+                height: 8px;
+                overflow: hidden;
+                border-top: 1px solid #fff;
+                border-right: 1px solid #fff;
+                transform:rotate(47deg);
+                -webkit-transform: rotate(47deg);
+                -moz-transform: rotate(47deg);
+                -ms-transform: rotate(47deg);
+                -o-transform: rotate(47deg);
+              }
+              .triangle:after{
+                content: "";
+                position: absolute;
+                top: 1px;
+                left: -12px;
+                //border: 10px solid transparent;
+                border-left-color: #0db3ff;
+                transform:rotate(135deg);
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+

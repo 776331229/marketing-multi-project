@@ -1,0 +1,45 @@
+/**公共函数样式*/
+/*伪类 添加分割线   before after -fmy-*/
+.before-after(@left:-3px,@bottom:3px,@width:1px,@height:70%){
+position: relative;
+  &:before{
+    content:"";
+    position: absolute;
+    left:@left;
+    bottom: @bottom;
+    width:@width;
+    height: @height;
+    display: block;
+    background-color: @lineColor;
+   }
+}
+
+//伪类 添加图片
+.li-before(@width:39px,@height:5px,@left:15px,@bottom:20px,@img:url(./../../assets/images/scanPay/right-arrow.png)){
+  position: relative;
+  //每个小导航下面小角标
+  &:before {
+    content: "";
+    width: @width;
+    height: @height;
+    position: absolute;
+    bottom: @bottom;
+    left: @left;
+    margin-left: -19px;
+    margin-top: -6px;
+    background: @img;
+  }
+}
+//线
+.line{
+  display: inline-block;
+  width: 50px;
+  vertical-align: middle;
+  border: 1px solid #63c3ef;
+}
+.line(@color:#63c3ef){
+  display: inline-block;
+  width: 50px;
+  vertical-align: middle;
+  border: 1px solid @color;
+}

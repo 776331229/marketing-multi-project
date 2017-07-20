@@ -11,10 +11,12 @@
     "test": "npm run e2e"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "echarts": "^3.3.2",
     "element-ui": "^1.0.0",
     "glob": "^7.1.1",
     "vue": "^2.0.1",
+    "vue-awesome-swiper": "^2.5.4",
     "vue-resource": "^1.0.3",
     "vue-swipe": "^2.0.0",
     "vuex": "^2.0.0"

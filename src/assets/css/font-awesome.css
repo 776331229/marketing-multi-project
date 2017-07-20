@@ -1,0 +1,17 @@
+@font-face {
+  font-family:'siyuanHei';
+  src: url('./../../../static/fonts/sourcehansanscnregular.eot');
+  src: local('fontName Regular'),
+  local('fontName'),
+  url('./../../../static/fonts/SourceHanSansCN-Regular-Alphabetic.woff') format('woff'),
+  url('./../../../static/fonts/SourceHanSansCN-Regular-Alphabetic.ttf') format('truetype'),
+  url('./../../../static/fonts/SourceHanSansCN-Regular-Alphabetic.svg') format('svg');
+
+}
+
+@font-face {
+  font-family:'PingFang-SC-Light';
+  src: url('./../../../static/fonts/pingfang-font.ttf');
+  src: local('fontName Regular'),
+  local('fontName');
+}

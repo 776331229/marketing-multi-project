@@ -7,7 +7,7 @@ var build = {
   //login: path.resolve(__dirname, '../dist/login.html'),
   assetsRoot: path.resolve(__dirname, '../dist'),
   assetsSubDirectory: 'static',
-  assetsPublicPath: '/',
+  assetsPublicPath: './',
   productionSourceMap: true,
   productionGzip: false,
   productionGzipExtensions: ['js', 'css']
