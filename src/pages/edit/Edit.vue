@@ -6,17 +6,17 @@
     <el-card class="box-card" header="编辑报表">
       <div class="from-group">
         <span>报表名称</span>
-        <el-input type="text" placeholder="请输入内容" ></el-input> 
+        <el-input type="text" placeholder="请输入内容" ></el-input>
       </div>
 
       <div class="from-group">
         <span>sql语句</span>
         <el-input type="textarea" placeholder="请输入内容" ></el-input>
       </div>
-      
-      
-    </el-card>
 
+
+    </el-card>
+  </div>
 </template>
 Edit
 <script>
@@ -31,10 +31,10 @@ export default {
   },
   data(){
   	return {
-  		
+
   	}
   }
-}	
+}
 </script>
 
 <style lang="less" scoped>
