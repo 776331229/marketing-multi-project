@@ -4,9 +4,9 @@
     <f-header></f-header>
     <div class="font-0">
       <div class="banner">
-        <router-link :to="{path:'/join'}" tag="a">
-          <img src="static/banner/banner2.png" alt="">
-        </router-link>
+        <a href="join.html">
+          <img src="static/banner/banner2.png" alt="banner图">
+        </a>
       </div>
       <!--轮播图 end-->
 
@@ -144,7 +144,7 @@
                 <!--APP 支付 start-->
                 <div class="apply-app dis-inline-block" style="vertical-align: bottom">
                   <!--<i class="apply-app-logo"></i>-->
-                  <IonicBox class="qr-code-logo" :width="45" :height="54" :marginRight="25" :src="require('../../assets/images/product/app.png')"></IonicBox>
+                  <IonicBox class="qr-code-logo" :width="35" :height="54" :marginRight="25" :src="require('../../assets/images/product/app.png')"></IonicBox>
                   <div class="qr-code-logo">
                     <p class="border-bom font-xi font-20 color-gary padding-bottom-10">APP收款</p>
                     <p class="font-siyuan font-16 color-cameo line-height-24">随时随地</p>
@@ -156,7 +156,7 @@
                 <!--api支付 start-->
                 <div class="apply-api dis-inline-block">
                   <!--<i class="apply-api-logo"></i>-->
-                  <IonicBox class="qr-code-logo" :width="45" :height="54" :marginRight="20" :src="require('../../assets/images/product/api.png')"></IonicBox>
+                  <IonicBox class="qr-code-logo apply-api-logo" :width="45" :height="54" :marginRight="20"  :src="require('../../assets/images/product/api.png')"></IonicBox>
                   <div class="qr-code-logo">
                     <p class="border-bom font-xi font-20 color-gary padding-bottom-10">API接口</p>
                     <p class="font-siyuan font-16 color-cameo line-height-24">可以在任何平台</p>
@@ -170,7 +170,7 @@
               <div class="bottom-2">
                 <div class="apply-barcode dis-inline-block">
                   <!--<i class="apply-barcode-logo"></i>-->
-                  <IonicBox class="qr-code-logo" :width="45" :height="54" :marginRight="20" :src="require('../../assets/images/product/barcode.png')"></IonicBox>
+                  <IonicBox class="qr-code-logo apply-barcode-logo" :width="45" :height="54" :marginRight="20" :src="require('../../assets/images/product/barcode.png')"></IonicBox>
                   <div class="qr-code-logo">
                     <p class="border-bom font-xi font-20 color-gary padding-bottom-10">扫码枪收款</p>
                     <p class="font-siyuan font-16 color-cameo line-height-24">无需打通系统、无需切换界面</p>
@@ -182,7 +182,7 @@
                 <!--pos支付 start-->
                 <div class="apply-pos dis-inline-block margin-left-100">
                   <!--<i class="apply-pos-logo"></i> -->
-                  <IonicBox class="qr-code-logo" :width="50" :height="54" :marginRight="20" :src="require('../../assets/images/product/pos.png')"></IonicBox>
+                  <IonicBox class="qr-code-logo apply-pos-logo" :width="50" :height="54" :marginRight="20" :src="require('../../assets/images/product/pos.png')"></IonicBox>
                   <div class="qr-code-logo">
                     <p class="border-bom font-xi font-20 color-gary padding-bottom-10">POS机收款</p>
                     <p class="font-siyuan font-16 color-cameo line-height-24">融合商用场景进行优化</p>

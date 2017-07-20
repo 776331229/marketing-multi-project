@@ -7,7 +7,7 @@
 //模块二 ：付呗不是支付
 .paybai-big-box  {
   height: 581px;
-  background-color: #f8f8f8;
+  background-color: @back-bg;
   position: relative;
   //付呗描述
   .paybai-note {
@@ -28,41 +28,41 @@
     width: 1188px;
     height: 309px;
     position: relative;
-   //移动支付
-   .payment {
-     position: absolute;
-     bottom: -20px;
-     left: 10px;
-   }
+    //移动支付
+    .payment {
+      position: absolute;
+      bottom: -20px;
+      left: 2px;
+    }
     //多级商户财务管理
     .multistage {
       position: absolute;
       bottom: -78px;
-      left: 215px;
+      left: 209px;
     }
     //店铺营销
     .dresses {
       position: absolute;
-      bottom: -110px;
-      left: 425px;
+      bottom: -116px;
+      left: 416px;
     }
     //活动营销
     .operations {
       position: absolute;
       bottom: -116px;
-      right: 448px;
+      right: 440px;
     }
     //自媒体运营
     .promotion {
       position: absolute;
       bottom: -78px;
-      right: 238px;
+      right: 233px;
     }
     //增值服务
     .add-service {
       position: absolute;
       bottom: -20px;
-      right: -11px;
+      right: -14px;
     }
   }
 }
@@ -79,12 +79,12 @@
       width: 1200px;
       position: relative;
       .line-one {
-          position: absolute;
-          top: 113px;
-          left: 438px;
-          width: 50px;
-          height: 2px;
-          background-color: #212121;
+        position: absolute;
+        top: 113px;
+        left: 438px;
+        width: 50px;
+        height: 2px;
+        background-color: @back;
       }
     }
     //描述盒子
@@ -94,79 +94,68 @@
       .apply-logo{
         width: 470px;
         vertical-align: top;
-
       }
       .apply-chart {
         width: 710px;
         height: 292px;
         position: relative;
         vertical-align: top;
-       .top-3{
-         margin-top: 10px;
-         //二维码
-         .qr-code {
-           width: 217px;
-           height: 104px;
-           .border-bom {
-             width: 100px;
-             margin-bottom: 11px;
-             border-bottom: 1px solid #00a0e9;
-           }
-         }
-         //app
-         .apply-app {
-           width: 219px;
-           height: 104px;
-           .apply-app-logo {
-             //position: absolute;
-             //top: 26px;
-             //left: 257px;
-             //width: 45px;
-             //height: 54px;
-             //background: url(../../assets/images/product/app.png) no-repeat;
-           }
-           .border-bom {
-             width: 79px;
-             margin-bottom: 11px;
-             border-bottom: 1px solid #00a0e9;
-           }
-         }
-         //api
-         .apply-api {
-           width: 217px;
-           height: 104px;
-           .apply-api-logo {
-             //position: absolute;
-             //top: 27px;
-             //right: 200px;
-             //width: 45px;
-             //height: 54px;
-             //background: url(../../assets/images/product/api.png) no-repeat;
-           }
-           .border-bom {
-             width: 78px;
-             margin-bottom: 11px;
-             border-bottom: 1px solid #00a0e9;
-           }
-         }
-       }
+        .top-3{
+          margin-top: 10px;
+          //二维码
+          .qr-code {
+            width: 217px;
+            height: 104px;
+            .border-bom {
+              width: 100px;
+              margin-bottom: 11px;
+              border-bottom: 1px solid @btn-default;
+            }
+          }
+          //app
+          .apply-app {
+            width: 219px;
+            height: 104px;
+            .apply-app-logo {
+              //position: absolute;
+              //top: 26px;
+              //left: 257px;
+              //width: 45px;
+              //height: 54px;
+              //background: url(../../assets/images/product/app.png) no-repeat;
+            }
+            .border-bom {
+              width: 79px;
+              margin-bottom: 11px;
+              border-bottom: 1px solid @btn-default;
+            }
+          }
+          //api
+          .apply-api {
+            width: 217px;
+            height: 104px;
+            .apply-api-logo {
+              margin-top: 5px;
+            }
+            .border-bom {
+              width: 78px;
+              margin-bottom: 11px;
+              border-bottom: 1px solid @btn-default;
+            }
+          }
+        }
         .bottom-2 {
           //扫码枪
           .apply-barcode {
             width: 307px;
             height: 104px;
             .apply-barcode-logo {
-              //position: absolute;
-              //top: 157px;
-              //left: 10px;
-              //width: 45px;
-              //height: 54px;
-              //background: url(../../assets/images/product/barcode.png) no-repeat;
+              margin-top: 5px;
             }
             .border-bom {
               width: 100px;
               margin-bottom: 11px;
-              border-bottom: 1px solid #00a0e9;
+              border-bottom: 1px solid @btn-default;
             }
           }
           //pos
@@ -174,17 +163,12 @@
             width: 300px;
             height: 104px;
             .apply-pos-logo {
-              //position: absolute;
-              //top: 159px;
-              //right: 241px;
-              //width: 50px;
-              //height: 54px;
-              //background: url(../../assets/images/product/pos.png) no-repeat;
+              margin-top: 5px;
             }
             .border-bom {
               width: 101px;
               margin-bottom: 11px;
-              border-bottom: 1px solid #00a0e9;
+              border-bottom: 1px solid @btn-default;
             }
           }
         }
@@ -196,7 +180,7 @@
 //模块四 : 多级商户财务管理
 .apply-management {
   height: 600px;
-  background-color: #f8f8f8;
+  background-color: @back-bg;
   .management-title {
     position: relative;
     .line-one {
@@ -205,7 +189,7 @@
       left: 455px;
       width: 50px;
       height: 2px;
-      background-color: #212121;
+      background-color: @back;
     }
   }
   .management-notes {
@@ -229,7 +213,7 @@
         }
         .border-bom {
           width: 121px;
-          border-bottom: 1px solid #e5e5e5;
+          border-bottom: 1px solid @lineColor;
         }
       }
       .mobile-phone {
@@ -246,7 +230,7 @@
         }
         .border-bom {
           width: 121px;
-          border-bottom: 1px solid #e5e5e5;
+          border-bottom: 1px solid @lineColor;
         }
       }
       .employee-play {
@@ -264,7 +248,7 @@
         }
         .border-bom {
           width: 121px;
-          border-bottom: 1px solid #e5e5e5;
+          border-bottom: 1px solid @lineColor;
         }
       }
     }
@@ -285,27 +269,27 @@
       left: 472px;
       width: 50px;
       height: 2px;
-      background-color: #212121;
+      background-color:@back;
     }
   }
- .friends-notes {
-   .friends-logo {
-     vertical-align: top;
-   }
-   .friends-description {
-     vertical-align: top;
-     .border-bom {
-       width: 121px;
-       border-bottom: 1px solid #00a0e9;
-     }
-   }
- }
+  .friends-notes {
+    .friends-logo {
+      vertical-align: top;
+    }
+    .friends-description {
+      vertical-align: top;
+      .border-bom {
+        width: 121px;
+        border-bottom: 1px solid @btn-default;
+      }
+    }
+  }
 }
 
 //模块六： 活动运营
 .apply-activities-box {
   height: 591px;
-  background-color: #f8f8f8;
+  background-color: @back-bg;
   .activities-title {
     position: relative;
     .line-one {
@@ -314,7 +298,7 @@
       left: 406px;
       width: 50px;
       height: 2px;
-      background-color: #212121;
+      background-color: @back;
     }
   }
   .activities-notes {
@@ -340,7 +324,7 @@
       left: 472px;
       width: 50px;
       height: 2px;
-      background-color: #212121;
+      background-color: @back;
     }
   }
   .media-description {
@@ -352,7 +336,7 @@
       position: relative;
       .border-bom {
         width: 100px;
-        border-bottom: 1px solid #00a0e9;
+        border-bottom: 1px solid @btn-default;
       }
       .arrows {
         position: absolute;
@@ -376,7 +360,7 @@
 
 .apply-appreciation-box {
   height: 599px;
-  background-color: #f8f8f8;
+  background-color: @back-bg;
   .appreciation-title {
     position: relative;
     .line-one {
@@ -385,7 +369,7 @@
       left: 347px;
       width: 50px;
       height: 2px;
-      background-color: #212121;
+      background-color: @back;
     }
   }
   .appreciation-box-3 {
@@ -396,8 +380,8 @@
       .eyeball-box {
         height: 237px;
         width: 380px;
-        border: 1px solid #e5e5e5;
-        background-color: #fff;
+        border: 1px solid @lineColor;
+        background-color:@white;
         .eyeball-logo {
           padding: 20px 0 20px 0;
         }
@@ -419,7 +403,6 @@
     }
   }
 }
-
 
 
 

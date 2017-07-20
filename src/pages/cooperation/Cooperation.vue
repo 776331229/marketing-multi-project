@@ -6,7 +6,7 @@
       <!-- 幻灯内容 -->
       <swiper-slide v-for="n in 4" :key="n" class="swiper-box">
         <div class="swiper-pic">
-          <router-link :to="{path:'/join'}" tag="a"><img :src="'static/banner/banner'+n+'.png'" alt="" style="width: 100%;"></router-link>
+          <a href="join.html"><img :src="'static/banner/banner'+n+'.png'" alt="" style="width: 100%;"></a>
         </div>
         <!--左右按钮-->
       </swiper-slide>
@@ -25,7 +25,7 @@
         <div class="top-detail font-0 margin-top-68">
           <div class="service service-pic"></div>
           <div class="service benefit color-cameo font-siyuan">
-            <div class="benefit-detail margin-top-45 margin-bottom-60">
+            <div class="benefit-detail margin-top-45 margin-bottom-50">
               <!--<div class="money icon1 margin-right-30"></div>-->
               <IonicBox :width="47" :height="47" :src="require('./../../assets/images/cooperation/get-money.png')"></IonicBox>
               <div class="inline-block text-center">
@@ -312,7 +312,7 @@
             <div class="box-left inline-block">
               <!--定制开发-->
               <div>
-                <div class="box-icon font-0 ver-align-m">
+                <div class="box-icon font-0 ver-align-m margin-top-20">
                   <img src="../../assets/images/cooperation/plan/plan-1.png" alt="">
                 </div>
                 <div class="box-word font-0 ver-align-m">

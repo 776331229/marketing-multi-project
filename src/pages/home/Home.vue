@@ -7,7 +7,7 @@
         <!-- 幻灯内容 -->
         <swiper-slide v-for="item in bannerList" :key="n" class="swiper-box ">
           <div class="swiper-pic swiper-wrapper">
-            <a href="/test.html"><img :src="item" alt="banner" style="width: 100%;"></a>
+            <a href="join.html"><img :src="item" alt="banner" style="width: 100%;"></a>
           </div>
           <!--左右按钮-->
         </swiper-slide>
@@ -163,7 +163,7 @@
 
     <!--72小时服务支持  start-->
     <f-module>
-      <div class="server-service margin-top-100">
+      <div class="server-service margin-top-100 margin-left-20">
         <img src="../../../static/partners/service.png" alt="">
       </div>
     </f-module>
@@ -256,20 +256,20 @@
           <div class="news-3 news-message dis-inline-block margin-right-120">
             <a href="#" class="button-box-1"><img src="../../../static/partners/newmessage.png" alt=""></a>
             <ul class="up-to-date padding-left-20 padding-right-20">
-              <li v-for="event in industryNews.list"><router-link tag="a" :to="{path:'/news/newsDetail',query:{id:event.id}}">{{event.title}}</router-link></li>
+              <li v-for="event in industryNews.list"><a :href="'news-detail.html?id='+event.id">{{event.title}}</a></li>
             </ul>
             <div class="news-more margin-top-15 margin-left-174">
-              <router-link :to="{path:'/news',query:{type:1}}" tag="p"> <p class="more-style font-siyuan font-12 font-weight-1 line-height-30 margin-right-30 margin-left-15">more<i class="triangle"></i><i class="triangle margin-left-8"></i></p> </router-link>
+              <a href="news.html?type=1"> <p class="more-style font-siyuan font-12 font-weight-1 line-height-30 margin-right-30 margin-left-15">more<i class="triangle"></i><i class="triangle margin-left-8"></i></p> </a>
             </div>
           </div>
           <!--公司动态 start-->
           <div class="news-3 dis-inline-block">
             <a href="#" class="button-box-1"><img src="../../../static/partners/companynews.png" alt=""></a>
             <ul class="up-to-date padding-left-20 padding-right-20">
-              <li v-for="item in fubeiNews.list"><router-link tag="a" :to="{path:'/news/newsDetail',query:{id:item.id}}">{{item.title}}</router-link></li>
+              <li v-for="item in fubeiNews.list"><a :href="'news-detail.html?id='+item.id">{{item.title}}</a></li>
             </ul>
             <div class="news-more margin-top-15 margin-left-174">
-              <router-link :to="{path:'/news',query:{type:2}}" tag="p"> <p class="more-style font-siyuan font-12 font-weight-1 line-height-30 margin-right-30 margin-left-15">more<i class="triangle"></i><i class="triangle margin-left-8"></i></p></router-link>
+              <a href="news.html?type=2"> <p class="more-style font-siyuan font-12 font-weight-1 line-height-30 margin-right-30 margin-left-15">more<i class="triangle"></i><i class="triangle margin-left-8"></i></p></a>
             </div>
           </div>
         </div>
@@ -341,8 +341,5 @@
 </script>
 
 <style lang="less" scoped>
-  #app{
-    overflow-x: hidden;
-  }
   @import "../../assets/css/modules/home.less";
 </style>

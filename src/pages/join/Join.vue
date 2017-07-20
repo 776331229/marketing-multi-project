@@ -2,7 +2,7 @@
   <div class="apply-form module-bg-blue">
     <div class="apply-content">
       <div class="top">
-        <a href="/home/index/join">
+        <a href="javascript:void(0)">
           <img src="../../assets/images/apply/logo.png" alt="" class="fubei-logo">
         </a>
         <img src="../../../static/apply/fubei-wechat.png" class="right">
@@ -228,12 +228,10 @@
       },
       //  检查申请数据
       checkData(){
-        debugger;
         if (this.applyData.company_name == '') {
           alert("公司名称为必填项目，不能为空");
           return false;
         }
-        debugger
         if(this.companyStatus!='1'){
           alert("该公司已存在，不能注册");
           return false;

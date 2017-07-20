@@ -3,9 +3,9 @@
     <f-header></f-header>
     <!--banner图 start-->
     <div class="banner font-0">
-      <router-link :to="{path:'/join'}" tag="a">
+      <a href="join.html">
         <img src="./../../../static/banner/successfur-banner.png" alt="成功案例">
-      </router-link>
+      </a>
     </div>
     <!--banner图 end-->
     <div class="middle font-0">

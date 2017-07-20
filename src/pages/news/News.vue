@@ -5,7 +5,7 @@
       <div class="cards-box type-page margin-bottom-20 clearfix">
         <!--卡片-->
         <div class="card" v-for="info in infoList">
-          <router-link :to="{path:'/news/newsDetail',query:{id:info.id}}" tag="a">
+          <a :href="'news-detail.html?id='+info.id">
             <img :src="info.img" alt="圖片">
             <h3 class="font-16 card-title">{{info.title}}</h3>
             <p class="card-content"  v-html="info.content"></p>
@@ -20,7 +20,7 @@
                 <span class="ver-align-m">{{info.click}}</span>
               </div>
             </div>
-          </router-link>
+          </a>
         </div>
         <p v-if="!infoList" class="tips">暂无更多新闻！</p>
       </div>
@@ -62,9 +62,8 @@
       }
     },
     mounted(){
-      this.newsData.type = this.$route.query.type;
-      let _this = this;
-      _this.requestData();
+      this.newsData.type = window.location.search.split("=")[1];
+      this.requestData();
     },
     methods: {
       requestData(){
@@ -73,8 +72,8 @@
           res => {
             if(res.success){
               this.infoList = res.data.list;
-//                  let num =  Math.ceil(res.data.count/9);
-              let num = 7;
+              let num =  Math.ceil(res.data.count/9);
+//                let num = 7;
               this.pageNo = num;
             }else {
               console.log(res.message);

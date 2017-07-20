@@ -7,7 +7,7 @@
       </div>
       <div class="dis-inline-block pay-words text-left margin-left-40">
         <p class="font-xi font-style-28 font-color">纷杂世界，一个就够了</p>
-        <p class="font-xi font-style-30  margin-top-20 margin-bottom-20">多码合一，集合多种支付模块</p>
+        <p class="font-xi font-style-30  margin-top-10 margin-bottom-40">多码合一，集合多种支付模块</p>
         <p class="font-xi confirm-logo   float-left">支持：</p><img src="../../../static/home/payment/qrcode/logo.png" alt="">
       </div>
     </div>

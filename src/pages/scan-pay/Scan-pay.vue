@@ -3,7 +3,7 @@
     <f-header></f-header>
     <!--轮播图 start-->
     <div class="banner">
-      <router-link :to="{path:'/join'}" tag="a"><img src="../../../static/banner/Sbanner.png" alt=""></router-link>
+      <a href="join.html"><img src="../../../static/banner/Sbanner.png" alt="banner图片"></a>
     </div>
     <!--轮播图 end-->
 
@@ -46,29 +46,28 @@
           <p class="font-xi size-34 font-color-21">APP<i class="line"></i><span class="font-color-blue">随时随地掌上生意</span></p>
         </div>
         <!--</div>-->
-
         <div class="handle-middle margin-top-40">
           <!--<div class="type-page">-->
           <!--扫码支付 + 门店管理 tab-->
           <div class="dis-inline-block handle-left sweep float-left">
             <!--扫码支付 tab-->
             <f-handle class="margin-bottom70" :class="{'small-trangle-l':type==1}" style="text-align: right" @changeStatus="change(1)">
-              <div class="inline-block font-xi">
+              <div class="inline-block font-xi scan-box scan-logo">
                 <h3>扫码支付</h3>
                 <h5>告别假币，随时随地可收钱</h5>
               </div>
-              <div class="dis-inline-block marginBesides-25">
-                <img src="../../assets/images/scanPay/scanPay.png" alt="">
+              <div class="dis-inline-block marginBesides-25 scan-logo">
+                <img src="../../assets/images/scanPay/scanPay.png" alt="" >
               </div>
             </f-handle>
             <!--门店管理 tab-->
             <f-handle :class="{'small-trangle-l':type==2}" style="text-align: right" @changeStatus="change(2)">
-              <div class="inline-block font-xi">
+              <div class="inline-block font-xi scan-logo">
                 <h3>门店管理</h3>
                 <h5>门店经营详情实时查看</h5>
                 <h5>员工数据汇总，绩效考核一键完成</h5>
               </div>
-              <div class="right inline-block marginBesides-15-24">
+              <div class="right inline-block marginBesides-15-24 store-logo">
                 <img src="../../assets/images/scanPay/store.png" alt="">
               </div>
             </f-handle>
@@ -86,7 +85,7 @@
               <div class="right inline-block marginBesides-29-20">
                 <img src="../../assets/images/scanPay/order.png" alt="">
               </div>
-              <div class="inline-block font-xi">
+              <div class="inline-block font-xi right">
                 <h3>订单管理</h3>
                 <h5>实时对账，了解所有交易数据</h5>
               </div>
@@ -97,7 +96,7 @@
               <div class="right inline-block marginBesides-29-17">
                 <img src="../../assets/images/scanPay/member.png" alt="">
               </div>
-              <div class="inline-block font-xi">
+              <div class="inline-block font-xi right">
                 <h3>会员管理</h3>
                 <h5>有效管理会员，发布会员活动</h5>
                 <h5>会员数据分析</h5>
@@ -113,7 +112,7 @@
 
 
     <!--PC 收银台页面 start-->
-    <f-module class="pc-big-box padding-top-95 margin-bottom-85 margin-left-50 ">
+    <f-module class="pc-big-box padding-top-95 margin-bottom-85">
       <div class="pc-title text-center">
         <p class="font-34 font-xi color-gary">pc收银台<i class="line-one"></i><span class="font-34 font-xi font-color-blue margin-left-55">兼容主流客显收银台</span></p>
         <p class="font-18 font-siyuan color-cameo margin-top-20">无需打通系统、无需切换界面、无需输入金额、简简单单的完成收款</p>
@@ -131,8 +130,9 @@
 
     <!--支付显示页面 start-->
     <f-module class="pay-view">
-      <div class="padding-top-66">
-        <router-view></router-view>
+      <div class="padding-top-66 pay-super-box overflow-hide">
+        <!--支付、卡券核销、电子会员，一键搞定 显示组件-->
+        <f-payshow :type="active"></f-payshow>
       </div>
     </f-module>
     <!--支付显示页面 end-->
@@ -141,9 +141,9 @@
     <f-module class="pay-tab font-0">
       <ul class="pay-3-box">
         <i class="tab-logo"></i>
-        <li class="font-xi font-20 color-cameo"><router-link to="payment" tag="a" class="pay-link"> 支付流程</router-link></li>
-        <li class="font-xi font-20 color-cameo"><router-link to="coupon" tag="a">卡券核销流程</router-link></li>
-        <li class="font-xi font-20 color-cameo"><router-link to="membership" tag="a" class="pay-link">电子会员</router-link></li>
+        <li class="font-xi font-20 color-cameo"><a @click="showActive(1)" :class="{'pay-link':active==1}"> 支付流程</a></li>
+        <li class="font-xi font-20 color-cameo"><a @click="showActive(2)" :class="{'api-link':active==2}">卡券核销流程</a></li>
+        <li class="font-xi font-20 color-cameo"><a @click="showActive(3)" :class="{'pay-link':active==3}">电子会员</a></li>
       </ul>
     </f-module>
 
@@ -262,6 +262,7 @@
   import fHandle from '../../components/f-handle/index.vue'
   import FFooter from 'src/components/f-footer'
   import FHeader from 'src/components/f-header'
+  import FPayshow from 'src/components/f-payshow/index.vue'
   import FModule from 'src/components/f-module/index.vue'
   import appPic from '../../../static/app-handle/scan4.png'
   export default {
@@ -270,9 +271,11 @@
       FModule,
       FHeader,
       FFooter,
+      FPayshow
     },
     data() {
       return {
+        active:1,   //支付显示
         type:1,
         appPic: appPic
       }
@@ -292,6 +295,10 @@
       change(no){
         this.type=no;
 //        console.log(this.type)
+      },
+      showActive(index) {
+        this.active = index;
+        console.log(this.active);
       }
     }
   }

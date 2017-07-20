@@ -1,4 +1,4 @@
-@import "./../../../assets/css/index.less";
+@import "./../index";
 //轮播图样式
 .swiper-box {
   position: relative;
@@ -48,27 +48,14 @@
   background-repeat: no-repeat;
 }
 .benefit{
+  margin-top: -7px;
   .benefit-detail{
     width: 100%;
     height:60px;
   }
-  //.money{
-  //  display: inline-block;
-  //  width: 47px;
-  //  height: 47px;
-  //}
-  //.icon1{
-  //  background-image: url("./../../assets/images/cooperation/get-money.png");
-  //}
-  //.icon2{
-  //  width: 50px;
-  //  height: 49px;
-  //  background-image: url("./../../assets/images/cooperation/service.png");
-  //}
 }
 // 资质特权
 .Qualification{
-//width: 100%;
   height: 425px;
 }
 .privileges{
@@ -109,8 +96,8 @@
   background-position: -645px 130px;
 }
 .icon-2{
-   background-position: -516px 130px;
- }
+  background-position: -516px 130px;
+}
 .icon-3{
   background-position: -387px 130px;
 }
@@ -146,7 +133,7 @@
   width: 420px;
   height: 44px;
   line-height: 44px;
-  border:1px dashed #00a0e9;
+  border:1px dashed @btn-default;
   border-radius: 4px;
 }
 //加盟优势
@@ -206,7 +193,7 @@
           left: 99px;
           width: 93px;
           height: 1px;
-          background-color: #00a0e9;
+          background-color: @btn-default;
         }
       }
 
@@ -215,41 +202,37 @@
 }
 //加盟流程
 .join-process{
-  //height: 474px;
   padding-top:90px;
   padding-bottom: 70px;
-  //background:.bg-light-blue;
-.section{
-  //width: 1200px;
-  //height: 474px;
-  background: url("../../../../static/cooperation/bg-line.png") no-repeat;
-  background-size: contain;
-  background-position: center 40%;
-  .processes{
-    margin-top: 50px;
-    margin-bottom: 65px;
-    .process{
-      vertical-align: top;
+  .section{
+    background: url("../../../../static/cooperation/bg-line.png") no-repeat;
+    background-size: contain;
+    background-position: center 30%;
+    .processes{
+      margin-top: 50px;
+      margin-bottom: 65px;
+      .process{
+        vertical-align: top;
+      }
     }
   }
-}
 }
 .line{
   width: 115px;
 }
 //按钮 申请加入
 .apply{
-  display: inline-block;
+  margin: 0 auto;
   width: 193px;
   height: 40px;
-  margin: 0 auto;
   line-height: 40px;
-  border: 1px solid #00a0e9;
+  color: @btn-default;
+  border: 1px solid @btn-default;
   border-radius: 5px;
   cursor: pointer;
   &:hover{
     color:#fff;
-    background: #00a0e9;
+    background: @btn-default;
   }
 }
 //年入百万计划
