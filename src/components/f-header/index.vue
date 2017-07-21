@@ -44,6 +44,7 @@
        }
      },
      created(){
+         console.log(window.location.pathname);
        this.pathName =  window.location.pathname;
      }
   }

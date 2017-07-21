@@ -316,12 +316,12 @@
       }
     },
     mounted(){
-      let _this = this;
+      this.appShow();
       http.post('/Home/NewIndex/news',{limit:4}).then(
         res => {
           if(res.success){
-            _this.industryNews = res.data[0];
-            _this.fubeiNews = res.data[1];
+            this.industryNews = res.data[0];
+            this.fubeiNews = res.data[1];
           }else {
             console.log(res.message);
           }
@@ -334,6 +334,17 @@
       showActive(index) {
         this.active = index;
         console.log(this.active);
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
     }
   }

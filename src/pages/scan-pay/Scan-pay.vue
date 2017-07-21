@@ -112,9 +112,9 @@
 
 
     <!--PC 收银台页面 start-->
-    <f-module class="pc-big-box padding-top-95 margin-bottom-85">
+    <f-module class="pc-big-box padding-top-95">
       <div class="pc-title text-center">
-        <p class="font-34 font-xi color-gary">pc收银台<i class="line-one"></i><span class="font-34 font-xi font-color-blue margin-left-55">兼容主流客显收银台</span></p>
+        <p class="font-34 font-xi color-gary">PC收银台<i class="line-one"></i><span class="font-34 font-xi font-color-blue margin-left-55">兼容主流客显收银台</span></p>
         <p class="font-18 font-siyuan color-cameo margin-top-20">无需打通系统、无需切换界面、无需输入金额、简简单单的完成收款</p>
       </div>
     </f-module>
@@ -291,6 +291,9 @@
         }
       }
     },
+    mounted(){
+      this.appShow();
+    },
     methods:{
       change(no){
         this.type=no;
@@ -299,6 +302,17 @@
       showActive(index) {
         this.active = index;
         console.log(this.active);
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
     }
   }

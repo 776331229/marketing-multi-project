@@ -49,7 +49,7 @@
       }
     },
     mounted(){
-      this.id = this.$route.query.id;
+      this.id = window.location.search.split("=")[1];
       this.getDetail();
     },
     methods:{
@@ -57,9 +57,9 @@
         let _this = this;
         http.post('/Home/NewIndex/newsInfo',{id:this.id}).then(
           res => {
+            this.appShow();
             if(res.success){
               this.news = res.data;
-              console.log(this.news);
             }else {
               console.log(res.message)
             }
@@ -67,6 +67,17 @@
             console.log(error);
           }
         )
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
     }
   }

@@ -11,9 +11,10 @@
   position: relative;
   //付呗描述
   .paybai-note {
-    margin-left: 227px;
-    position: absolute;
-    left: 18%;
+    //margin-left: 227px;
+    //position: absolute;
+    //left: 18%;
+    width: 1200px;
     .fubei-title-box {
       height: 34px;
       line-height: 34px;
@@ -25,9 +26,9 @@
   }
   //背景图
   .paybai-bg {
-    width: 1188px;
     height: 309px;
     position: relative;
+    background: url(../../../../static/product/bubeipay.png) no-repeat center bottom;
     //移动支付
     .payment {
       position: absolute;
@@ -62,7 +63,7 @@
     .add-service {
       position: absolute;
       bottom: -20px;
-      right: -14px;
+      right: -1px;
     }
   }
 }
@@ -193,7 +194,6 @@
     }
   }
   .management-notes {
-    width: 1200px;
     vertical-align: top;
     .management-description {
       width: 566px;
@@ -203,14 +203,8 @@
         height: 70px;
         line-height: 70px;
         position: relative;
-        .account-logo {
-          //position: absolute;
-          //top: 10px;
-          //left: 10px;
-          //width: 60px;
-          //height: 60px;
-          //background: url(../../assets/images/product/3account.png) no-repeat;
-        }
+        vertical-align: middle;
+
         .border-bom {
           width: 121px;
           border-bottom: 1px solid @lineColor;
@@ -302,7 +296,6 @@
     }
   }
   .activities-notes {
-    width: 1200px;
     .activities-description {
       width: 600px;
       vertical-align: top;
@@ -403,6 +396,5 @@
     }
   }
 }
-
 
 

@@ -5,8 +5,9 @@
       <div class="cards-box type-page margin-bottom-20 clearfix">
         <!--卡片-->
         <div class="card" v-for="info in infoList">
+          <!--<img src="http://7xomur.com1.z0.glb.clouddn.com/data/uploads/article/555c575ab6f0b.jpg?v=12323" alt="">-->
           <a :href="'news-detail.html?id='+info.id">
-            <img :src="info.img" alt="圖片">
+            <img :src="info.img" alt="图片">
             <h3 class="font-16 card-title">{{info.title}}</h3>
             <p class="card-content"  v-html="info.content"></p>
             <div class="auth-info">
@@ -44,10 +45,7 @@
       FFooter,
     },
     watch: {
-      currentPage: 'requestData'
-    },
-    ready(){
-      this.requestData()
+      currentPage: 'requestData',
     },
     data(){
       return {
@@ -70,10 +68,10 @@
         this.newsData.page=this.currentPage;
         http.post('/Home/NewIndex/newsList', this.newsData).then(
           res => {
+            this.appShow();
             if(res.success){
               this.infoList = res.data.list;
               let num =  Math.ceil(res.data.count/9);
-//                let num = 7;
               this.pageNo = num;
             }else {
               console.log(res.message);
@@ -82,6 +80,17 @@
             console.log(error);
           }
         )
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
     }
   }

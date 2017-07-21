@@ -35,7 +35,7 @@
   }
   .foot-menu{
     cursor: pointer;
-    p{
+    a{
       padding: 0 25px;
       text-align: center;
       color: #333;
@@ -43,24 +43,24 @@
         padding: 0 0 0 25px;
       }
     }
-    p:nth-of-type(n+2){
+    a:nth-of-type(n+2){
       .before-after;
     }
   }
-//合作伙伴样式
-.cooperate{
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  p{
-    margin: 0 25px;
+  //合作伙伴样式
+  .cooperate{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    p{
+      margin: 0 25px;
+    }
+    img:nth-of-type(1){
+      margin-left: 25px;
+      margin-right: 27px;
+    }
+    img{margin: 0 27px;}
   }
-  img:nth-of-type(1){
-    margin-left: 25px;
-    margin-right: 27px;
-  }
-  img{margin: 0 27px;}
-}
 }
 //底部菜单右边二维码样式
 .right-content{
@@ -108,6 +108,6 @@
   }
 }
 .footer-box {
-  width: 100%;
+  min-width: 1200px;
   color:  #000;
 }

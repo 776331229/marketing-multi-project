@@ -1,62 +1,63 @@
 @import "./../../assets/css/index";
 //导航栏样式
 .bod-bottom{
-  box-shadow: 1px 1.732px 4px 0 #ccc;
-}
-.j-nav {
-  width: 1200px;
-  height: 85px;
-  line-height: 85px;
-  //logo盒子
-  .logo-box {
-    width: 100px;
+  min-width: 1200px;
+  //box-shadow: 0 2px 0 #ccc;
+  box-shadow: 1px 1.732px 1px  #ccc;
+  .j-nav {
+    min-width: 1200px;
     height: 85px;
-    //logo图片
-    .j-logo {
-      height: 26px;
+    line-height: 85px;
+    //logo盒子
+    .logo-box {
       width: 100px;
-      background: url(../../assets/images/logo.png) no-repeat;
-      vertical-align: middle;
+      height: 85px;
+      //logo图片
+      .j-logo {
+        height: 26px;
+        width: 100px;
+        background: url(../../assets/images/logo.png) no-repeat;
+        vertical-align: middle;
+      }
     }
-  }
-  ul {
-    width: 1100px;
-    //border-bottom: 1px solid #ccc;
-    li {
-      display: inline-block;
-      padding-left: 20px;
-      //.li-before;
-    }
+    ul {
+      width: 1100px;
+      li {
+        display: inline-block;
+        padding-left: 20px;
+        //.li-before;
+      }
 
-    //链接被激活时的样式
-    .homeLink{
-      display: inline-block;
-      color: #00a0e9;
+      //链接被激活时的样式
+      .homeLink{
+        display: inline-block;
+        color: #00a0e9;
         .li-before();
+      }
+      >a{
+        display: inline-block;
+        color: #00a0e9;
+        .li-before(68px,1px,url(../../assets/images/icon/active2.png));
+      }
     }
-    a.router-link-active{
-      display: inline-block;
-      color: #00a0e9;
-      .li-before(68px,1px,url(../../assets/images/icon/active2.png));
+
+    //伪类样式
+    .li-before(@width:39px,@left:17px,@img:url(../../assets/images/icon/active.png)){
+      position: relative;
+      //每个小导航下面小角标
+      &:before {
+        content: "";
+        width: @width;
+        height: 5px;
+        position: absolute;
+        bottom: 0px;
+        left: 17px;
+        margin-left: -19px;
+        margin-top: -6px;
+        background: @img;
+      }
     }
   }
 
-  //伪类样式
-  .li-before(@width:39px,@left:17px,@img:url(../../assets/images/icon/active.png)){
-    position: relative;
-    //每个小导航下面小角标
-    &:before {
-      content: "";
-      width: @width;
-      height: 5px;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      right:0;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: -6px;
-      background: @img;
-    }
-  }
 }
+

@@ -53,8 +53,7 @@
         <!--付呗不是支付 描述 end-->
 
         <!--背景图 小球球 start-->
-        <div class="paybai-bg text-center padding-top-90">
-          <img src="../../../static/product/bubeipay.png" alt="fubeipay bg" title="fubei bg">
+        <div class="paybai-bg text-center padding-top-90 font-0">
           <!--移动支付 start-->
           <div class="payment margin-top-15 font-0">
             <p class="font-siyuan font-18 color-gary font-weight-1  margin-bottom-13">移动支付</p>
@@ -225,8 +224,8 @@
             <!--远程手机店-->
             <div class="mobile-phone margin-top-28">
               <!--<i class="phone-logo"></i>-->
-              <IonicBox :width="60" :height="60" :marginRight="48" :marginLeft="7" :src="require('../../assets/images/product/phone.png')"></IonicBox>
-              <div class="dis-inline-block">
+              <IonicBox :width="60" :height="60" :marginRight="48" :marginLeft="7" :src="require('../../assets/images/product/phone.png')" class="ver-align-m"></IonicBox>
+              <div class="dis-inline-block ver-align-m">
                 <p class="border-bom padding-bottom-10 font-xi font-20 color-gary line-height-20">远程手机管店</p>
                 <p class="margin-top-9 font-16 color-cameo font-siyuan line-height-16">交易数据等各类数据实时更新分析，手机直接查看</p>
                 <p class="font-16 color-cameo font-siyuan ">做到门店数据了然于胸</p>
@@ -234,10 +233,10 @@
             </div>
 
             <!--员工绩效考核 start-->
-            <div class="employee-play">
+            <div class="employee-play ver-align-m">
               <!--<i class="employee-logo"></i>-->
-              <IonicBox :width="60" :height="60" :marginRight="49" :marginLeft="5" :src="require('../../assets/images/product/employee.png')"></IonicBox>
-              <div class="dis-inline-block">
+              <IonicBox :width="60" :height="60" :marginRight="49" :marginLeft="5" :src="require('../../assets/images/product/employee.png')" class="ver-align-m"></IonicBox>
+              <div class="dis-inline-block ver-align-m">
                 <p class="border-bom padding-bottom-10 font-xi font-20 color-gary line-height-20">员工绩效考核</p>
                 <p class=" margin-top-9 font-16 color-cameo font-siyuan line-height-16">门店扩展太快，员工绩效不好考核？付呗员工数据</p>
                 <p class="font-16 color-cameo font-siyuan">实时记录，清晰明了</p>
@@ -494,6 +493,22 @@
     data() {
       return {
 
+      }
+    },
+    mounted(){
+        this.appShow();
+    },
+    methods:{
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
     }
   }

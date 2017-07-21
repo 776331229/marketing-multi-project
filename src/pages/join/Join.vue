@@ -2,7 +2,7 @@
   <div class="apply-form module-bg-blue">
     <div class="apply-content">
       <div class="top">
-        <a href="javascript:void(0)">
+        <a href="/home/index/join">
           <img src="../../assets/images/apply/logo.png" alt="" class="fubei-logo">
         </a>
         <img src="../../../static/apply/fubei-wechat.png" class="right">
@@ -86,7 +86,7 @@
             </span>
           </div>
           <!--提交申请按钮-->
-          <button class="btn" :class="isSubmit ? 'btn-limit':'btn-submit'" @click="applyJoin()">{{buttonT}}</button>
+          <button class="btn" :disabled="isSubmit" :class="isSubmit ? 'btn-limit':'btn-submit'" @click="applyJoin()">{{buttonT}}</button>
         </div>
       </div>
       <p class="cootRight inline-block">
@@ -150,8 +150,8 @@
       },
     },
     mounted(){
-      let _this = this;
-      _this.getCity(0, 0);
+      this.appShow();
+      this.getCity(0, 0);
     },
     methods: {
       //选择的省
@@ -276,25 +276,19 @@
             console.log(error);
           }
         )
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
-    },
-
-    /**切入路由之前，获取进入页面所需要的内容
-     * @param to 前往的路由参数
-     * @param form 哪里来的路由参数
-     * @param next 下一步
-     * */
-//   beforeRouteEnter(to,from,next){
-//       console.log(from.path);
-//       if(from.name !== 'checkDetail'){
-//           http.post('/localhost:3000/',{}).then(res=>{
-//               console.log(res);
-//           },error=>{
-//               console.log(error);
-//           })
-//       }
-//   }
-
+    }
   }
 </script>
 <style lang="less" scoped>

@@ -42,17 +42,12 @@
     data(){
       return {}
     },
-    mounted:function () {
-      this.loadMap()
+    mounted() {
+        this.appShow();
+        this.loadMap()
     },
     methods:{
       //获取地图经纬度
-//    let address='浙江省杭州市余杭区';
-//    let url = 'http://restapi.amap.com/v3/geocode/geo?'+'&output=JSON&key=5e36fcd741b72a60368fbcd9aae9c2df';
-
-//    xAjax(url,'get',{address},res=>{
-//        console.log(res);
-//    })
       loadMap() {
         let map = new AMap.Map('container', {
           resizeEnable: true,
@@ -69,6 +64,17 @@
           color:'red',
           map: map
         });
+      },
+      /**
+       * 初始加载时候的loading动画
+       * */
+      appShow() {
+        const END_TIME = new Date().getTime() //结束时间
+        const diffTime = END_TIME - PAGE_START_TIME
+        const timer = setTimeout(() => {
+          clearTimeout(timer)
+          document.querySelector('#loading').className += ' app-loading-hide'
+        }, diffTime > 1000 ? 0 : 1000 - diffTime)
       }
 
 
